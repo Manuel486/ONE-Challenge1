@@ -1,0 +1,290 @@
+:root{
+    --texto: #0A3871;
+    --fondo-body: #E5E5E5;
+    --borde-boton: darkblue;
+    --fondo-boton: #EFF1FA;
+    --texto-boton: white;
+    --fondo-resultado: #FFFFFF;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    background-color: var(--fondo-body);
+}
+
+main {
+    width: 90%;
+    height: 90%;
+    display: flex;
+}
+
+.contenedor__principal{
+    display: flex;
+    width: 77%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.contenedor__logo{
+    position: relative;
+    bottom: 20px;
+}
+
+.contenedor__texto {
+    width: 100%;
+    height: 50rem;
+}
+
+.contenedor__texto textarea{
+    width: 100%;
+    height: 100%;
+    font-size: 3.2rem;
+    padding: 7rem 20rem;
+    background-color: var(--color-fondo);
+    border: none;
+    outline: none;
+    color: var(--texto);
+    resize: none;
+}
+
+.contenedor__advertencia{
+    display: flex;
+    justify-content: space-between;
+    width: 26rem;
+    margin-left: 21rem;
+}
+
+.contenedor__botones{
+    margin-left: 21rem;
+    width: 80rem;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn{
+    width: 38rem;
+    height: 6rem;
+    border-radius: 24px;
+    font-weight: bold;
+    border-color: var(--borde-boton);
+    color: var(--borde-boton);
+    cursor: pointer;
+    background-color: var(--fondo-boton);
+}
+
+.btn:active{
+    transform: translateY(5px);
+}
+
+.btn:hover{
+    background-color: var(--borde-boton);
+    color: var(--texto-boton);
+}
+
+.contenedor__resultado {
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--fondo-resultado);
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.resultado__mensaje{
+    text-align: center;
+}
+
+.resultado__mensaje img{
+    width: 100%;
+    height: 25rem;
+}
+
+
+.resultado__mensaje h2{
+    padding: 1rem;
+    font-size: 3rem;
+}
+
+.resultado__mensaje p{
+    padding: 1rem;
+    font-size: 1.8rem;
+}
+
+.resultado__copiar{
+    width: 100%;
+    height: 100%;
+    display: none;
+    padding: 0 4rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.resultado__copiar textarea{
+    height: 80%;
+    border: none;
+    outline: none;
+    font-size: 1.8rem;
+    float: left;
+    resize: none;
+}
+
+/* No se resalte al momento de copiar */
+.resultado__copiar textarea::selection{
+    background-color: transparent;
+}
+
+.resultado__copiar button{
+    width: 100%;
+    height: 6rem;
+    border-radius: 24px;
+    background-color: var(--texto-boton);
+    border-color: var(--borde-boton);
+    color: var(--borde-boton);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 1224px) and (max-width: 1590px){ 
+
+    .contenedor__principal{
+        width: 74%;
+    }
+
+    .contenedor__texto textarea{
+        padding: 5rem 10rem;
+    }
+
+    .contenedor__advertencia{
+        margin-left: 2rem;
+    }
+
+    .contenedor__botones{
+        margin-left: 0rem;
+    }
+
+    .contenedor__resultado {
+        width: 26%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1224px){ 
+
+    body{
+        height: 100%;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .contenedor__principal{
+        width: 100%;
+    }
+
+    .contenedor__logo{
+        margin-top: 1rem;
+        position: static;
+    }
+
+    .contenedor__texto textarea{
+        padding: 2.5rem 5rem;
+    }
+
+    .contenedor__botones{
+        margin: 1rem 0 1rem 0;
+        width: 100%;
+        height: 15rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+
+    .contenedor__advertencia{
+        margin-left: 1rem;
+    }
+
+    .contenedor__resultado {
+        width: 100%;
+        height: 20rem;
+        margin-top: 13,3rem;
+        margin-bottom: 3rem;
+        padding: 1.5rem;
+    }
+    
+    .resultado__mensaje img{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px){ 
+
+    body{
+        height: 100%;
+    }
+
+    main {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .contenedor__principal{
+        width: 100%;
+    }
+
+    .contenedor__logo{
+        margin-top: 1rem;
+        position: static;
+    }
+
+    .contenedor__texto textarea{
+        padding: 1.5rem 2.5rem;
+        font-size: 2rem;
+    }
+
+    .contenedor__advertencia{
+        margin-left: 1rem;
+    }
+
+    .contenedor__botones{
+        margin: 1rem 0 1rem 0;
+        width: 100%;
+        height: 15rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+
+    .contenedor__resultado {
+        width: 100%;
+        height: 20rem;
+        margin-top: 13,3rem;
+        margin-bottom: 3rem;
+        padding: 1.5rem;
+    }
+    
+    .resultado__mensaje img{
+        display: none;
+    }
+}
