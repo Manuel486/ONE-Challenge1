@@ -1,4 +1,3 @@
-# ONE-Challenge1
 # Sistema de encriptación
 
 # Descripcion 
@@ -16,8 +15,8 @@ La letra "u" es convertida para "ufat"
 - Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original.
 
 Por ejemplo:
-*"gato" => "gaitober"
-*gaitober" => "gato"
+-"gato" => "gaitober"
+-gaitober" => "gato"
 
 La página debe tener campos para
 inserción del texto que será encriptado o desencriptado, y el usuario debe poder escoger entre as dos opciones.
